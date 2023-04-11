@@ -56,12 +56,10 @@ function f(x){
    for(i=1;i<=11; i++){
       
       if(document.getElementById("numero"+i).value != ''){
-    
       result = eval(result + (document.getElementById("numero"+i).value * ( x** (11-i) ) ) )
         
       }
     }
-
   return(result);
 }
 
@@ -69,15 +67,14 @@ function f(x){
 function bolzanoTheorem(f, PrimeiroNumero, SegundoNumero, epsilon,contador) {
 
   let Meio = (PrimeiroNumero + SegundoNumero) / 2; 
-  console.log("meio de A e B é: "+Meio)
   let FMeio = f(Meio); 
   let numIterations = 0; 
   
   while (Math.abs(SegundoNumero - PrimeiroNumero) >= epsilon && FMeio !== 0) {
     if (f(PrimeiroNumero) * FMeio < 0) {
-      SegundoNumero = Meio;
+       PrimeiroNumero = Meio;
     } else {
-      PrimeiroNumero = Meio;
+      SegundoNumero = Meio;
     }
     let li = document.createElement("li");
     li.innerHTML = ("xϵ["+PrimeiroNumero +" ; "+ SegundoNumero+"]") ;;
