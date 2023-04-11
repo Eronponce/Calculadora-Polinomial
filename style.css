@@ -42,7 +42,7 @@ ul:activate{
   width: 100%;
 }
 .box{
-  width: 55%;
+  width: 70%;
   height: 15rem;
   background-color: var(--orange);
   border-style: outset;
