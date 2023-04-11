@@ -1,0 +1,139 @@
+html{
+  height: 100%;
+  width: 100%;
+  background-color: #151221;
+}
+
+:root{
+  --margem: 0px 0px 0px 1.5%;
+  --red: #11e488;
+  --pink: #FA00BB;
+  --purple: #1a5ce0;
+  --roxo: #831EF7;
+  --orange: #f08223;
+}
+
+h1{
+  text-align: center;
+  font-family: oswald;
+  color: white;
+  font-size: 300%;
+  transition: linear 1s
+}
+#function{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+input{
+  background-color: var(--purple);
+  width: 30px;
+  margin: var(--margem);
+  border-radius: 11%;
+  color: yellow;
+}
+.nsei{
+  margin: 0px 0px 45px 0px;
+}
+ul{
+  list-style-type: none;
+}
+ul:activate{
+  width: 100%;
+}
+.box{
+  width: 55%;
+  height: 15rem;
+  background-color: var(--orange);
+  border-style: outset;
+  border-color: coral;
+  border-width: 7px;
+  border-radius: 2.5%;
+}
+.box h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple);
+  color: yellow;
+  width: 150px;
+  height: 50px;
+  border-radius: 6%;
+  box-shadow: 2px 2px 2px 2px #0d0d91;
+}
+.alinhou{
+  display: flex;
+  justify-content: center;
+}
+.alinhamos{
+  display: flex;
+  justify-content:center;
+  color: yellow;
+  font-size: 125%;
+  text-shadow: 
+              -1px -1px 0px #000000, 
+              -1px 1px 0px #000000,                 
+              1px -1px 0px #000000,                  
+              1px 0px 0px #000000;
+}
+.adoletra{
+  margin: 1.5%;
+}
+h2{
+  font-size: 250%;
+}
+button{
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purple);
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  font-size: 2rem;
+  border-radius: 6px;
+  transition-duration: 1s;
+}
+button:hover {
+  background-color: var(--red); /* Green */
+  color: #262222;
+}
+
+.botaoCalculadora {
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vida {
+  font-family: monospace;
+  border-right: 4px solid;
+  width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(10), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+#result{
+  color: white;
+  font-size: 125%;
+  font-family: arial;
+  display: disable;
+}
+.flex-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
