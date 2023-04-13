@@ -52,7 +52,7 @@ function getElements(){
 }
 
 function f(x){
-  result = 1;
+  result = 0;
    for(i=1;i<=11; i++){
       
       if(document.getElementById("numero"+i).value != ''){
@@ -60,9 +60,9 @@ function f(x){
         
       }
     }
+    console.log("F de: " + x+ "é: " +result)
   return(result);
 }
-
 
 function bolzanoTheorem(f, PrimeiroNumero, SegundoNumero, epsilon,contador) {
 
@@ -70,8 +70,12 @@ function bolzanoTheorem(f, PrimeiroNumero, SegundoNumero, epsilon,contador) {
   let FMeio = f(Meio); 
   let numIterations = 0; 
   
-  while (Math.abs(SegundoNumero - PrimeiroNumero) >= epsilon && FMeio !== 0) {
-    if (f(PrimeiroNumero) * FMeio < 0) {
+  while (Math.abs(PrimeiroNumero - SegundoNumero ) > epsilon) {
+   
+    FMeio = f(Meio);
+    console.log(Meio+ "e " + FMeio)
+    
+    if (f(PrimeiroNumero) * FMeio > 0) {
        PrimeiroNumero = Meio;
     } else {
       SegundoNumero = Meio;
@@ -80,8 +84,6 @@ function bolzanoTheorem(f, PrimeiroNumero, SegundoNumero, epsilon,contador) {
     li.innerHTML = ("xϵ["+PrimeiroNumero +" ; "+ SegundoNumero+"]") ;;
     document.getElementById("tabela"+contador).appendChild(li);
     Meio = (PrimeiroNumero + SegundoNumero) / 2;
-    FMeio = f(Meio);
     numIterations++;
   }
 }
-
